@@ -1,0 +1,21 @@
+{
+	"name": "vk-google-font-for-block-theme",
+	"version": "0.0.0",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dist": "npm run copy",
+		"copy": "rm -rf dist && mkdir -p dist/vk-google-font-for-block-theme && find . -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\; && rsync -av --progress --exclude dist/ ./ dist/vk-google-font-for-block-theme/",
+		"zip": "npm run dist && cd dist/vk-google-font-for-block-theme && rm -rf .git && rm -rf dist && cd ../ && zip -r vk-google-font-for-block-theme.zip vk-google-font-for-block-theme && cd .."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vektor-inc/vk-google-font-for-block-theme.git"
+	},
+	"author": "kurudrive",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/vektor-inc/vk-google-font-for-block-theme/issues"
+	},
+	"homepage": "https://github.com/vektor-inc/vk-google-font-for-block-theme#readme"
+}
