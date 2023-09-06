@@ -4,9 +4,9 @@
 	"description": "",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dist": "npm run copy",
-		"copy": "rm -rf dist && mkdir -p dist/vk-google-font-for-block-theme && find . -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\; && rsync -av --progress --exclude dist/ ./ dist/vk-google-font-for-block-theme/",
-		"zip": "npm run dist && cd dist/vk-google-font-for-block-theme && rm -rf .git && rm -rf dist && cd ../ && zip -r vk-google-font-for-block-theme.zip vk-google-font-for-block-theme && cd .."
+		"dist": "rm -rf dist && mkdir -p dist/vk-google-font-for-block-theme && rsync -av --progress --exclude dist/ ./ dist/vk-google-font-for-block-theme/",
+		"delete-files": "cd dist/vk-google-font-for-block-theme && rm -rf .git && rm -rf dist && find . -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\;",
+		"zip": "npm run dist && cd ../ && zip -r vk-google-font-for-block-theme.zip vk-google-font-for-block-theme && cd .."
 	},
 	"repository": {
 		"type": "git",
