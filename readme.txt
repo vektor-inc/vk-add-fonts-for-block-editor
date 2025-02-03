@@ -1,10 +1,10 @@
-=== VK Google Font for Block Theme ===
+=== VK Add Fonts For Block Editor ===
 Contributors: vektor-inc,kurudrive
 Tags: 
-Requires at least: 6.2
+Requires at least: 6.5
 Tested up to: 6.3
 Requires PHP: 7.4
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,8 @@ Add Google web fonts
 
 == Changelog ==
 
+= 0.2.0 =
+* [ Specification Change ] Change Plugin Name
 * [ Specification Change ] Modify it to support non-block themes.
 
 = 0.1.0 =
