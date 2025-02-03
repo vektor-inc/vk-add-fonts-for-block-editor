@@ -88,15 +88,15 @@ function vkgf_add_font_theme_json_filter( $theme_json ) {
 		),
 	);
 	// フォントをマージ.
-	$fontFamilies = array_merge(
+	$font_families = array_merge(
 		$get_data['settings']['typography']['fontFamilies']['theme'],
 		$add_font_array
 	);
-	$new_data     = array(
-		'version'  => 2,
+	$new_data      = array(
+		'version'  => 3,
 		'settings' => array(
 			'typography' => array(
-				'fontFamilies' => $fontFamilies,
+				'fontFamilies' => $font_families,
 			),
 		),
 	);
