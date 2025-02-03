@@ -15,10 +15,6 @@
  * @package vk-google-font-for-block-themes
  */
 
-if ( ! wp_is_block_theme() ) {
-	return;
-}
-
 function vkgf_add_font_theme_json_filter( $theme_json ) {
 	// theme.json の内容を一旦配列で変数に格納.
 	$get_data = $theme_json->get_data();
@@ -88,10 +84,12 @@ function vkgf_add_font_theme_json_filter( $theme_json ) {
 		),
 	);
 	// フォントをマージ.
-	$font_families = array_merge(
-		$get_data['settings']['typography']['fontFamilies']['theme'],
-		$add_font_array
-	);
+	$font_families = isset( $get_data['settings']['typography']['fontFamilies']['theme'] ) && is_array( $get_data['settings']['typography']['fontFamilies']['theme'] )
+		? array_merge(
+			$get_data['settings']['typography']['fontFamilies']['theme'],
+			$add_font_array
+		)
+		: $add_font_array; // もし配列でない場合は $add_font_array のみを使用.
 	$new_data      = array(
 		'version'  => 3,
 		'settings' => array(
@@ -112,9 +110,9 @@ add_filter( 'wp_theme_json_data_theme', 'vkgf_add_font_theme_json_filter' );
  * @return void
  */
 function vkgf_load_web_fonts() {
-	// Noto Sans JP 読み込み
+	// Noto Sans JP 読み込み.
 	wp_enqueue_style( 'load-font-noto-sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap', array(), null );
-	// Noto Serif JP 読み込み
+	// Noto Serif JP 読み込み.
 	wp_enqueue_style( 'load-font-noto-serif', 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'vkgf_load_web_fonts' );

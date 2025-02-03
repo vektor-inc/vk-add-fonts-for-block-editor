@@ -20,6 +20,8 @@ Add Google web fonts
 
 == Changelog ==
 
+* [ Specification Change ] Modify it to support non-block themes.
+
 = 0.1.0 =
 * [ Bug fix ] Fixed a bug that causes errors when the classic theme is activated.
 
