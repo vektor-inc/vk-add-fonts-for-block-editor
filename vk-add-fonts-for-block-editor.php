@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: VK Google Font for Block Theme
+ * Plugin Name: VK Add Fonts for Block Editor
  * Plugin URI:
- * Description: ブロックテーマに Google Web Font の Noto Sans JP と Noto Serif JP を追加します。このプラグインはブロックテーマのみで動作します。
+ * Description: ブロックエディタのタイポグラフィーのフォント選択で Google Web Font の Noto Sans JP と Noto Serif JP を追加します。
  * Version: 0.1.0
  * Requires PHP: 7.4
  * Requires at least: 6.3
@@ -12,8 +12,22 @@
  * Author URI: https://vektor-inc.co.jp
  * License: GPL2
  *
- * @package vk-google-font-for-block-themes
+ * @package vk-add-fonts-for-block-editor
  */
+
+// プラグインが有効化されたときに呼び出される関数
+function vkgf_deactivate_other_plugin() {
+	// プラグインのパスを指定
+	$plugin = 'vk-google-font-for-block-themes/vk-google-font-for-block-themes.php';
+
+	// プラグインが有効化されている場合は無効化
+	if ( is_plugin_active( $plugin ) ) {
+		deactivate_plugins( $plugin );
+	}
+}
+register_activation_hook( __FILE__, 'vkgf_deactivate_other_plugin' );
+
+// vk-add-fonts-for-gutenberg
 
 function vkgf_add_font_theme_json_filter( $theme_json ) {
 	// theme.json の内容を一旦配列で変数に格納.
