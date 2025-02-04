@@ -33,12 +33,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHubトークンを使用
         with:
-          tag_name: ${{ github.ref }}  # タグ名を使用
-          release_name: ${{ github.ref }}  # バージョン番号のみ
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-          files: |
-            dist/vk-add-fonts-for-block-editor.zip  # 生成されたZIPファイルのパス
+        #   files: |
+        #     dist/vk-add-fonts-for-block-editor.zip  # 生成されたZIPファイルのパス
 
       - name: Upload Release Asset
         if: steps.create_release.outcome == 'success'
