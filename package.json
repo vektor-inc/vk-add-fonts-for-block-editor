@@ -1,20 +1,20 @@
 {
-	"name": "vk-google-font-for-block-theme",
+	"name": "vk-add-fonts-for-block-editor",
 	"version": "0.0.0",
 	"description": "",
 	"scripts": {
-		"dist": "rm -rf dist && mkdir -p dist/vk-google-font-for-block-theme && rsync -av --progress --exclude dist/ ./ dist/vk-google-font-for-block-theme/ && npm run delete-files",
-		"delete-files": "rm -rf dist/vk-google-font-for-block-theme/.git && rm -rf dist/vk-google-font-for-block-theme/dist && find dist/vk-google-font-for-block-theme/ -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\;",
-		"zip": "npm run dist && cd dist/vk-google-font-for-block-theme && zip -r ../vk-google-font-for-block-theme.zip ."
+		"dist": "rm -rf dist && mkdir -p dist/vk-add-fonts-for-block-editor && rsync -av --progress --exclude dist/ ./ dist/vk-add-fonts-for-block-editor/ && npm run delete-files",
+		"delete-files": "rm -rf dist/vk-add-fonts-for-block-editor/.github && rm -rf dist/vk-add-fonts-for-block-editor/.git && rm -rf dist/vk-add-fonts-for-block-editor/dist && find dist/vk-add-fonts-for-block-editor/ -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\;",
+		"zip": "npm run dist && cd dist/vk-add-fonts-for-block-editor && zip -r ../vk-add-fonts-for-block-editor.zip ."
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vektor-inc/vk-google-font-for-block-theme.git"
+		"url": "git+https://github.com/vektor-inc/vk-add-fonts-for-block-editor.git"
 	},
 	"author": "kurudrive",
 	"license": "GPL-2.0-or-later",
 	"bugs": {
-		"url": "https://github.com/vektor-inc/vk-google-font-for-block-theme/issues"
+		"url": "https://github.com/vektor-inc/vk-add-fonts-for-block-editor/issues"
 	},
-	"homepage": "https://github.com/vektor-inc/vk-google-font-for-block-theme#readme"
+	"homepage": "https://github.com/vektor-inc/vk-add-fonts-for-block-editor#readme"
 }
