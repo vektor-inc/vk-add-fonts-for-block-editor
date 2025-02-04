@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHubトークンを使用
         with:
           tag_name: ${{ github.ref }}  # タグ名を使用
-        #   release_name: Release ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
           files: |
