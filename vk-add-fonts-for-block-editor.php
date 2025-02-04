@@ -25,6 +25,9 @@ $my_update_checker = PucFactory::buildUpdateChecker(
 	'vk-add-fonts-for-block-editor'
 );
 
+// Set the branch that contains the stable release.
+$my_update_checker->setBranch( 'main' );
+
 $my_update_checker->getVcsApi()->enableReleaseAssets();
 
 class Vk_Add_Fonts_For_Block_Editor {
