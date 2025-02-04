@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"description": "",
 	"scripts": {
-		"dist": "rm -rf dist && mkdir -p dist/vk-add-fonts-for-block-editor && rsync -av --progress --exclude dist/ ./ dist/vk-add-fonts-for-block-editor/ && npm run delete-files",
+		"dist": "rm -rf dist && mkdir -p dist/vk-add-fonts-for-block-editor && composer install && rsync -av --progress --exclude dist/ ./ dist/vk-add-fonts-for-block-editor/ && npm run delete-files",
 		"delete-files": "rm -rf dist/vk-add-fonts-for-block-editor/.github && rm -rf dist/vk-add-fonts-for-block-editor/.git && rm -rf dist/vk-add-fonts-for-block-editor/dist && find dist/vk-add-fonts-for-block-editor/ -maxdepth 1 -type f ! \\( -name '*.txt' -o -name '*.php' \\) -exec rm {} \\;",
 		"zip": "npm run dist && cd dist/vk-add-fonts-for-block-editor && zip -r ../vk-add-fonts-for-block-editor.zip ."
 	},
