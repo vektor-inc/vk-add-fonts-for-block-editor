@@ -15,6 +15,18 @@
  * @package vk-add-fonts-for-block-editor
  */
 
+// Composer のファイルを読み込み ( composer install --no-dev ).
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$my_update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/vektor-inc/vk-add-fonts-for-block-editor/',
+	__FILE__,
+	'vk-add-fonts-for-block-editor'
+);
+
+$my_update_checker->getVcsApi()->enableReleaseAssets();
+
 class Vk_Add_Fonts_For_Block_Editor {
 	/**
 	 * Construct

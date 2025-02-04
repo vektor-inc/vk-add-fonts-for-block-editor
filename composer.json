@@ -1,0 +1,12 @@
+{
+	"name": "vektor/vk-add-fonts-for-block-editor",
+	"authors": [
+		{
+			"name": "vektor,inc.",
+			"email": "vk-develop@vektor-inc.co.jp"
+		}
+	],
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^5.0"
+    }
+}
