@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: VK Add Fonts For Block Editor
+ * Plugin Name: VK Add Fonts for Block Editor
  * Plugin URI:
  * Description: ブロックエディタのタイポグラフィーのフォント選択で Google Web Font の Noto Sans JP と Noto Serif JP を追加します。
  * Version: 0.2.0.4
