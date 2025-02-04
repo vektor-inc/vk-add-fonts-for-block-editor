@@ -48,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ env.plugin_name }}.zip
-          asset_name: ${{ env.plugin_name }}.zip
+          asset_path: dist/vk-add-fonts-for-block-editor.zip  # 元のZIPファイルのパス
+          asset_name: vk-add-fonts-for-block-editor.zip  # 元のZIPファイル名
           asset_content_type: application/zip
